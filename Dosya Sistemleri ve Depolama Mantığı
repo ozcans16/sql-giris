@@ -1,0 +1,17 @@
+#Blok yapısı:
+Dosya sistemlerinde verilerin diskte küçük sabit boyutlu parçalar (bloklar) halinde saklanmasıdır.
+
+#HDD çalışma prensibi:
+Hard Disk Drive manyetik plakalar üzerinde dönen disk ve okuma-yazma kafasıyla veriyi fiziksel olarak okur/yazar.
+
+#SSD çalışma prensibi:
+Solid State Drive veriyi hareketli parça olmadan flash bellek hücrelerinde elektriksel olarak saklar ve çok daha hızlı erişir.
+
+#NTFS:
+NTFS, Microsoft tarafından geliştirilen ve genellikle Windows sistemlerinde kullanılan gelişmiş dosya sistemidir.
+
+#ext4:
+ext4, çoğu Linux dağıtımında kullanılan hızlı ve kararlı açık kaynak dosya sistemidir.
+
+#APFS:
+Apple File System, Apple tarafından macOS ve iOS cihazları için geliştirilen modern dosya sistemidir.
