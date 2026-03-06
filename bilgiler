@@ -1,0 +1,39 @@
+
+#En genç öğrenci kim?
+
+SELECT *
+FROM Students
+ORDER BY age ASC
+LIMIT 1;
+
+
+#Hiç kursa kayıt olmayan öğrenciler
+
+SELECT Students.*
+FROM Students
+LEFT JOIN Enrollments
+ON Students.id = Enrollments.student_id
+WHERE Enrollments.student_id IS NULL;
+
+
+#en çok kazanç getiren kurs
+#(kurs fiyatı × kayıtlı öğrenci sayısı)
+
+SELECT Courses.title,
+       COUNT(Enrollments.id) * Courses.price AS total_revenue
+FROM Courses
+JOIN Enrollments
+ON Courses.id = Enrollments.course_id
+GROUP BY Courses.id
+ORDER BY total_revenue DESC
+LIMIT 1;
+
+
+ #2025 yılında kayıt olan öğrenciler
+
+SELECT Students.name, Enrollments.enrollment_date
+FROM Enrollments
+JOIN Students
+ON Students.id = Enrollments.student_id
+WHERE Enrollments.enrollment_date 
+BETWEEN '2025-01-01' AND '2025-12-31';
